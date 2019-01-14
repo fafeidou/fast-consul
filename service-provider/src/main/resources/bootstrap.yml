@@ -1,0 +1,11 @@
+server:
+  port: 8081  # 因为本地启动，防止端口冲突
+spring:
+  application:
+    name: service-provider
+  cloud:
+    consul:
+      host: 192.168.32.111    # consul 启动地址
+      port: 8500         # consul 启动端口
+      discovery:
+        service-name: service-provider
