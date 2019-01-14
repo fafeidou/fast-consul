@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: admin-server
+  security:
+    user:
+      name: "admin"
+      password: "admin"
+  cloud:
+    consul:
+      host: 192.168.32.111    # consul 启动地址
+      port: 8500         # consul 启动端口
+server:
+  port: 8769
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
